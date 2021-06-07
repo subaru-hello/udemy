@@ -6,7 +6,8 @@
                 <tr>
                 <th scope="col ">ID</th>
                 <th scope="col">Title</th>
-                <th scope="col">Menu</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
                 </tr>
             </thead>
     <tbody>
@@ -15,6 +16,7 @@
                         <th scope="row"><%= question.id%></th>
                         <td><%= question.title%></td>
                         <td>[<%= link_to 'Edit', edit_question_path(question)%>]</td>  
+                        <td>[<%= link_to 'Delete', question_path(question), method: :delete, data:{ confirm: 'Are you sure?'}%>]</td>  
                         <br>
                 </tr>
                     <%end%>
