@@ -1,10 +1,12 @@
 class QuestionsController < ApplicationController
+  before_action :set_question, only: [:show, :edit, :update, :destroy]
   def index
     @questions = Question.all
   end
 
   def show
-    @question = Question.find(params[:id])
+    # @question = Question.find(params[:id])
+    @answer = Answer.new
   end
 
   def new
@@ -22,11 +24,11 @@ def create
 end
 
   def edit
-    @question = Question.find(params[:id])
+    # @question = Question.find(params[:id])
   end
 
   def update
-    @question = Question.find(params[:id])
+    # @question = Question.find(params[:id])
 
     if@question.update(question_params)
       redirect_to root_path, notice: 'Success'
@@ -37,12 +39,17 @@ end
   end
 
   def destroy
-    @question = Question.find(params[:id])
+    # @question = Question.find(params[:id])
     @question.destroy
     redirect_to root_path, notice: 'Success!'
   end
 
 private
+
+def set_question
+  @question = Question.find(params[:id]) #重複する処理を先頭に持って行ってリファクタリングをする
+end
+
   def question_params
     # byebug
     params.require(:question).permit(:name, :title, :content) #ストロングパラメーター
