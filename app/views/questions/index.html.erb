@@ -14,13 +14,13 @@
                     <% @questions.each do|question| %>
                         <th scope="row"><%= question.id%></th>
                         <td><%= question.title%></td>
-                        <td>[Edit][Delete]</td>  
+                        <td>[<%= link_to 'Edit', edit_question_path(question)%>]</td>  
                         <br>
                 </tr>
                     <%end%>
     </tbody>
     
     </table>
-
+<%= link_to 'New Question', new_question_path %>
      </div>
     </div>
