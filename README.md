@@ -1,4 +1,17 @@
 # README
+・このアプリ製作を通して学びたいこと
+Githubのを使った個人開発の進め方
+https://qiita.com/tkmd35/items/9612c03dc60b1c516969
+
+開発手順
+１issue を作成
+２ローカルリポジトリでブランチを切る
+３ローカルリポジトリ、ブランチ上でひたすら作業
+４ローカルリポジトリでコミット & リモートリポジトリにプッシュ
+５GitHub（リモートリポジトリ）でプルリクエストを作成して、ブランチをマージ
+６issue を確認してクローズ
+７ローカルリポジトリのマスターブランチをリモートリポジトリと同じ内容にする
+
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
