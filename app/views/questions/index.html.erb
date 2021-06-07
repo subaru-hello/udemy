@@ -1,0 +1,26 @@
+<h2>Questions</h2>
+    <div class="row">
+        <div class="col-md-12">
+        <table class="table table-striped">
+            <thead class="thead-light">
+                <tr>
+                <th scope="col ">ID</th>
+                <th scope="col">Title</th>
+                <th scope="col">Menu</th>
+                </tr>
+            </thead>
+    <tbody>
+                <tr>
+                    <% @questions.each do|question| %>
+                        <th scope="row"><%= question.id%></th>
+                        <td><%= question.title%></td>
+                        <td>[Edit][Delete]</td>  
+                        <br>
+                </tr>
+                    <%end%>
+    </tbody>
+    
+    </table>
+
+     </div>
+    </div>
